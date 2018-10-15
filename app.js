@@ -42,12 +42,12 @@ app.delete('/notes/:id', function (req, res) {
 const note = mongoose.model('note', {
   title: String,
   description: String,
-  movieTitle: String
+  movieTitle: String,
+  date: String
 });
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
 
 // OUR MOCK ARRAY OF PROJECTS
 let notes = [
@@ -72,6 +72,10 @@ app.get('/', (req, res) => {
 // NEW
 app.get('/notes/new', (req, res) => {
   res.render('notes-new', {});
+})
+// ADD DUE DATE
+app.get('/notes/new-date', (req, res) => {
+  res.render('notes-new-date', {});
 })
 // SHOW
 app.get('/notes/:id', (req, res) => {

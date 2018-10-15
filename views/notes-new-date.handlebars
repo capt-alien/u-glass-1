@@ -1,0 +1,17 @@
+<form method="POST" action="/notes">
+
+  <fieldset>
+    <legend class="note-title">Add Due Date</legend>
+    <!-- Due Date -->
+    <label for="note-title" class="edit-captions">Create a due date for your notes</label><br>
+    <div class="input-group mb-3">
+      <input id="note-date" type="date" name="date" value="{{note.date}}" class="form-control">
+    </div>
+  </fieldset>
+
+  <!-- BUTTON -->
+  <p>
+    <button type="submit" class="btn btn-outline-dark button-custom">Save Date</button>
+  </p>
+
+</form>

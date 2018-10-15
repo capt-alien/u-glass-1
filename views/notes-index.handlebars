@@ -1,13 +1,17 @@
 <div class="alert alert-dark" role="alert">
   <p class="title-header">Notes</p>
 </div>
+<a href="/notes/new-date" class="btn btn-outline-primary button-custom"><i class="fas fa-calendar-alt"></i> Add Due Date</a>
 <a href="/notes/new" class="btn btn-outline-primary button-custom"><i class="fas fa-plus-circle"></i> New Note</a>
-
 <div class="card">
   <div class="card-body">
     {{#each notes}}
       <p class="note-item"><a href="/notes/{{this._id}}">{{this.title}}</a>
       <small><strong>{{this.movieTitle}}</strong></small></p>
-    {{/each}}
+      {{/each}}
   </div>
 </div>
+
+  {{#each notes}}
+  <b><a class="date" href="/notes/{{this._id}}">{{this.date}}</b>
+{{/each}}
