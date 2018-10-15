@@ -1,0 +1,9 @@
+<h1 class="note-title">{{note.title}}</h1>
+<h2 class="note-subtitle">{{note.movieTitle}}</h2>
+<p class="note-content">{{note.description}}</p>
+<!-- Buttons -->
+<a href="/notes/{{note._id}}/edit" class="btn btn-outline-primary button-custom"><i class="far fa-edit"></i> Edit Note</a>
+<form method="POST" action="/notes/{{note._id}}?_method=DELETE">
+    <button type="submit" class="btn btn-outline-primary button-custom"><i class="far fa-trash-alt"></i> Delete Note</button>
+</form>
+<a href="/" class="btn btn-outline-dark button-custom"><i class="fas fa-home"></i> Home</a>
