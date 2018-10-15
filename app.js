@@ -4,7 +4,7 @@ const methodOverride = require('method-override')
 var exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/contractor-project');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/contractor-project');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // override with POST having ?_method=DELETE or ?_method=PUT
@@ -91,6 +91,6 @@ app.get('/notes/:id/edit', (req, res) => {
     res.render('notes-edit', {note: note});
   })
 })
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('App listening on port 3000!')
 })
