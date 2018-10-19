@@ -11,35 +11,35 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 
 // CREATE
-app.post('/notes', (req, res) => {
-  note.create(req.body).then((note) => {
-    console.log(note)
-    res.redirect(`/notes/${note._id}`) // Redirect to notes/:id
+app.post('/issues', (req, res) => {
+  issue.create(req.body).then((issue) => {
+    console.log(issue)
+    res.redirect(`/issues/${issue._id}`) // Redirect to issues/:id
   }).catch((err) => {
     console.log(err.message)
   })
 })
 // UPDATE
-app.put('/notes/:id', (req, res) => {
-  note.findByIdAndUpdate(req.params.id, req.body)
-    .then(note => {
-      res.redirect(`/notes/${note._id}`)
+app.put('/issues/:id', (req, res) => {
+  issue.findByIdAndUpdate(req.params.id, req.body)
+    .then(issue => {
+      res.redirect(`/issues/${issue._id}`)
     })
     .catch(err => {
       console.log(err.message)
     })
 })
 // DELETE
-app.delete('/notes/:id', function (req, res) {
-  console.log("DELETE note")
-  note.findByIdAndRemove(req.params.id).then((note) => {
+app.delete('/issues/:id', function (req, res) {
+  console.log("DELETE issue")
+  issue.findByIdAndRemove(req.params.id).then((issue) => {
     res.redirect('/');
   }).catch((err) => {
     console.log(err.message);
   })
 })
 
-const note = mongoose.model('note', {
+const issue = mongoose.model('issue', {
   title: String,
   description: String,
   movieTitle: String,
@@ -50,45 +50,45 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // OUR MOCK ARRAY OF PROJECTS
-let notes = [
-  { title: "Great note", movieTitle: "Batman II" },
+let issues = [
+  { title: "Great issue", movieTitle: "Batman II" },
   { title: "Awesome Movie", movieTitle: "Titanic" }
 ]
-// var notes = [
-//   { title: "Great note" },
-//   { title: "Next note" }
+// var issues = [
+//   { title: "Great issue" },
+//   { title: "Next issue" }
 // ]
 
 // INDEX
 app.get('/', (req, res) => {
-  note.find()
-    .then(notes => {
-      res.render('notes-index', { notes: notes });
+  issue.find()
+    .then(issues => {
+      res.render('issues-index', { issues: issues });
     })
     .catch(err => {
       console.log(err);
     })
 })
 // NEW
-app.get('/notes/new', (req, res) => {
-  res.render('notes-new', {});
+app.get('/issues/new', (req, res) => {
+  res.render('issues-new', {});
 })
 // ADD DUE DATE
-app.get('/notes/new-date', (req, res) => {
-  res.render('notes-new-date', {});
+app.get('/issues/new-date', (req, res) => {
+  res.render('issues-new-date', {});
 })
 // SHOW
-app.get('/notes/:id', (req, res) => {
-  note.findById(req.params.id).then((note) => {
-    res.render('notes-show', { note: note })
+app.get('/issues/:id', (req, res) => {
+  issue.findById(req.params.id).then((issue) => {
+    res.render('issues-show', { issue: issue })
   }).catch((err) => {
     console.log(err.message);
   })
 })
 // EDIT
-app.get('/notes/:id/edit', (req, res) => {
-  note.findById(req.params.id, function(err, note) {
-    res.render('notes-edit', {note: note});
+app.get('/issues/:id/edit', (req, res) => {
+  issue.findById(req.params.id, function(err, issue) {
+    res.render('issues-edit', {issue: issue});
   })
 })
 app.listen(process.env.PORT || 3000, () => {
