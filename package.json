@@ -1,7 +1,7 @@
 {
-  "name": "contractor-project",
+  "name": "Intensive",
   "version": "1.0.0",
-  "description": "BEW - Make School Contractor Project",
+  "description": "Intensive - Make School Intensive One Project",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
