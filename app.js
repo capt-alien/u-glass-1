@@ -19,7 +19,7 @@ app.post('/products', (req, res) => {
     console.log(err.message)
   })
 })
-// Change an product you have created
+// Change a product you have created
 app.put('/products/:id', (req, res) => {
   product.findByIdAndUpdate(req.params.id, req.body)
     .then(product => {
