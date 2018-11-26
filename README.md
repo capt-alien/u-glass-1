@@ -1,5 +1,5 @@
 # U-Glass
-U-Glass - Make School SPD/Intensive Project
+U-Glass - Make School
 
 This project is a basic starter for a single feature that I want to be in another project called Rose. Rose is a social media application focused on solving issue in your community.
 
