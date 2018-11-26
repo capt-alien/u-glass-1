@@ -1,0 +1,10 @@
+<h1 class="product-title">{{product.title}}</h1>
+<h2 class="product-subtitle">{{product.movieTitle}}</h2>
+<p class="product-content">{{product.description}}</p>
+<p class="product-content">{{product.date}}</p>
+<!-- Buttons -->
+<form method="POST" action="/products/{{product._id}}?_method=DELETE">
+  <a href="/products/{{product._id}}/edit" class="btn btn-outline-secondary button-custom edit-custom"><i class="far fa-edit"></i> Edit</a>
+
+<button type="submit" class="btn btn-outline-secondary button-custom delete-custom"><i class="far fa-trash-alt"></i> Delete</button>
+</form>

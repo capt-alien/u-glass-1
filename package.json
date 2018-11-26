@@ -1,7 +1,7 @@
 {
-  "name": "Intensive",
+  "name": "U-Glass",
   "version": "1.0.0",
-  "description": "Intensive - Make School Intensive One Project",
+  "description": "U-Glass - Make School SPD 1.2 Project",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

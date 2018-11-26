@@ -1,81 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Rose</title>
+  <title>U-GLASS</title>
   <link rel="icon" type="image/png" href="https://mbtskoudsalg.com/images/transparent-favicons-black-2.png"/>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">U-Glass</a>
+    </div>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control search-box" placeholder="Search...">
+      </div>
+      <button type="submit" class="btn btn-default">GO!</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="/products/new"><i class="fas fa-plus-circle"></i> Add Item</a></li>
+     <li><a href="/products/about">About Us</a></li>
+   </ul>
+  </div>
+</nav>
 <div class="container">
-  <center>
   {{{body}}}
-</center>
-<p class="cred">Single feature demo for Rose. By Parker Tenove @ Make School</p>
+<p class="cred">MVP U-GLASS</p>
+<div class="info">
+<a type="button" data-toggle="modal" data-target="#myModal"><i class="fas fa-info-circle"></i></a>
 </div>
-</body>
+
+<!-- Modal last -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Info</h4>
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis justo sollicitudin est porta, at aliquet tellus aliquam. Sed non lorem nec ipsum mollis posuere. Sed elit ipsum, convallis et cursus nec, scelerisque eget neque. Nullam in ultrices massa, sed mattis augue. Nullam dictum eget eros sit amet ornare. Aliquam erat volutpat. Aenean ornare est quis velit tempor tincidunt. Vivamus id metus eu magna varius blandit. Nulla facilisi. Nullam maximus ultricies ligula sed aliquet. Quisque leo massa, venenatis dapibus feugiat at, aliquam ac ligula.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+</div>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
-  margin-top:200px;
-  background-image:url('https://webgradients.com/public/webgradients_png/089%20Premium%20White.png');
+background-color:#f5f5f5;
 }
-.container{
-  max-width:30%;
+.search-box{
+  width:400px !important;
 }
 .cred{
   position:fixed;
   bottom:0px;
-  margin-left:5px;
+  left:20px;
   color:grey;
   font-size:12px;
 }
-.alert{
-  height:35px;
-  background-color:#82ccdd;
-  border-color:#82ccdd;
+.logo{
+font-family: 'Nunito', sans-serif;
+color:#2c3e50;
+}
+#u-logo{
+  color:#6c5ce7;
+}
+.disclaimer{
+width:50%;
+font-size:12px;
+}
+.info{
+  position:fixed;
+  bottom:15px;
+  right:20px;
+}
+.info a:link{
+color:grey;
+}
+.info:hover{
+font-size:17px;
+}
+.navbar-brand{
+  color:#636e72!important;
+}
+.result{
+  max-width:48.5%;
+  margin-bottom:5px !important;
+}
+.new-product{
+  margin-top:7%;
+  max-width:40%;
+}
+.new-product-input{
+  width:100%;
+}
+.new-product-go{
+  width:40%;
+  background-color:#636e72;
   color:#fff;
 }
-.title-header{
-  margin-top:-7px;
-  font-size:30px;
-  color:#ee5253;
+label{
+  padding-top:12px;
 }
-.button-custom{
-  width:150px;
-  margin-bottom:10px;
-  border-radius:0px;
+.panel-body{
+  padding:7px;
+  padding-left:15px;
 }
-.edit-icon{
+.delete-custom{
+  background-color:transparent !important;
+  color:#636e72;
+  margin-left:-12px;
+}
+.edit-custom{
+  color:#636e72;
+  margin-left:-12px;
+}
+.about-us{
+  margin-top:5%;
+  width:70%;
+  font-family: 'Roboto', sans-serif;
+  font-size:18px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.name{
   color:grey;
-  font-size:13px;
+  font-size:12px;
 }
-.issue-item{
-  color:#b2bec3;
-}
-.issue-title{
-  color:#2d3436;
-}
-.issue-subtitle{
-  color:#636e72;
-  font-size:20px;
-  margin-bottom:30px;
-}
-.issue-content{
-  color:#95afc0;
-  margin-bottom:30px;
-}
-.edit-captions{
-  color:#636e72;
-  font-size:15px;
-}
-.issue{
-  padding-top:10px;
-  padding-bottom:30px;
-}
-a.date{
-  font-size:13px;
-  color:#95a5a6 !important;
+.name-two{
+  color:grey;
+  font-size:12px;
+  margin-left:10px;
 }
 </style>
+</body>
 </html>

@@ -1,0 +1,23 @@
+<center>
+<fieldset class="new-product">
+  <legend class="issue-title">New Product Entry</legend>
+  <!-- What's the issue -->
+  <label for="issue-title" class="edit-captions">Product Name</label><br>
+  <div class="input-group mb-3 new-product-input">
+    <input id="issue-title" type="text" name="title" value="{{issue.title}}" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="e.g. Peppercorn">
+  </div>
+  <!-- Who does this affect -->
+  <label for="movie-title" class="edit-captions">Food Group or Manufacturer</label><br>
+  <div class="input-group mb-3 new-product-input">
+    <input id="issue-title" id="movie-title" type="text" name="movieTitle" value="{{issue.movieTitle}}" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="e.g. Valley Brook Farms">
+  </div>
+  <!-- Describe the issue -->
+  <label for="issue-description" class="edit-captions">Product Description</label>
+  <div class="input-group issue new-product-input">
+  <textarea class="form-control" aria-label="With textarea" id="issue-description" name="description">{{issue.description}}</textarea>
+</div>
+<small>
+By submitting this form you are responsible for descriptions, nutrient data and ingredient information of this product.
+</small>
+</fieldset>
+</center>

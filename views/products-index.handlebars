@@ -1,0 +1,9 @@
+    {{#each products}}
+      <a href="/products/{{this._id}}">
+        <div class="panel panel-default result">
+      <div class="panel-body">
+        {{this.title}}<br>
+        <small><strong>{{this.movieTitle}}</strong> <i class="fas fa-external-link-square-alt"></i></small>
+      </div>
+    </div></a>
+      {{/each}}
