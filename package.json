@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ParkerTenove/intensive.git"
+    "url": "git+https://github.com/ParkerTenove/u-glass.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ParkerTenove/intensive/issues"
+    "url": "https://github.com/ParkerTenove/u-glass/products"
   },
-  "homepage": "https://github.com/ParkerTenove/intensive#readme",
+  "homepage": "https://github.com/ParkerTenove/u-glass#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
